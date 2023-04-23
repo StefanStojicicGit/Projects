@@ -1,0 +1,255 @@
+/* header */
+.naslovnaLinija {
+  color: #8d6700;
+  text-transform: uppercase;
+  font: bold 50px "Garamond";
+  text-align: center;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+hr {
+  border-top: 1px solid #8d6700;
+  margin: 0;
+}
+
+.navbar {
+  padding-left: 0%;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 3em;
+  background-color: #ffffffd7;
+  text-align: center;
+}
+ul.menu li {
+  display: inline-block;
+  line-height: 3em;
+  border-right: 1px solid #8d6700;
+  border-left: 1px solid #8d6700;
+}
+ul.menu li a {
+  display: block;
+  text-decoration: none;
+  color: #8d6700;
+  text-align: center;
+  padding: 0em 4em;
+  font-size: 20px;
+}
+
+ul.menu li.icon {
+  display: none;
+}
+
+ul.menu li a:hover {
+  background-color: rgb(224, 224, 224);
+  color: #333;
+}
+ul.menu li a:active {
+  background-color: rgb(129, 129, 129);
+  color: #333;
+}
+.navbar li a.active {
+  text-decoration: underline;
+}
+/* separator */
+.separator {
+  margin-top: 5px;
+  padding: 1rem 1rem;
+}
+/* glavna slika */
+
+.container-slika {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.slika {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  margin: 5px;
+  padding: 5px;
+  border: 3px solid #8d6700;
+}
+.slika > img {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+.slikabanner {
+  width: 95%;
+}
+.slikabanner > img {
+  width: 100%;
+}
+
+/* naslovi i paragrafi */
+.naslov {
+  font-weight: bold;
+  font: bold 34px "Garamond";
+  color: #8d6700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.naslov1 {
+  font-weight: bold;
+  font: bold 40px "Garamond";
+  color: #8d6700;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  text-align: center;
+}
+.paragraf1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 800px;
+  padding: 25px;
+  font: 26px "Garamond";
+  border: 1px solid #8d6700;
+}
+.container-tekst {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* footer */
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 20px;
+  padding-right: 2.5vw;
+}
+.container-footer > ul > li {
+  float: left;
+  list-style-type: none;
+  padding: 0 0.5vw;
+}
+
+a {
+  margin-bottom: 0px;
+}
+u {
+  color: #8d6700;
+}
+b {
+  color: #8d6700;
+}
+mark {
+  color: #359994;
+}
+table {
+  border: 1px solid #8d6700;
+  display: flex;
+  justify-content: space-around;
+}
+table tr td {
+  padding: 10px;
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-inn {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-innn {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* podesavanja responzivnosti*/
+
+@media screen and (max-width: 1320px) {
+  ul.menu li a {
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 1076px) {
+  ul.menu li a {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  ul.menu li a {
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul.menu li:not(:first-child) {
+      display: none;
+    }
+    ul.menu li.icon {
+      display: block;
+    }
+    ul.menu.responsive {
+      height: 18em;
+      position: relative;
+      transition: 1s;
+      width: 100%;
+    }
+    ul.menu.responsive li {
+      display: block;
+    }
+
+    .card {
+      margin-top: 5px;
+    }
+    #footer {
+      border-top: none;
+    }
+    .opcije {
+      margin-left: -15px;
+    }
+    p {
+      font-size: 22px;
+    }
+  }
+  .container-footer {
+    padding-right: 9vw;
+  }
+}

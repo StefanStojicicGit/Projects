@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stefan Stojičić e-Portfolio" />
+    <meta
+      name="keywords"
+      content="eportfolio, e-portfolio, Stefan Stojičić, portfolio Stefan Stojičić"
+    />
+    <meta
+      name="author"
+      content="Stefan Stojičić, stefannrt2819@gs.viser.edu.rs"
+    />
+    <title>e-Portfolio - Kontakt</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link href="css/stil.css" rel="stylesheet" />
+    <style>
+      ul li {
+        color: #8d6700;
+        list-style-type: none;
+        margin: 0;
+        height: 3em;
+        background-color: #ffffffd7;
+        text-align: center;
+      }
+      .mojul {
+        width: 220px;
+        font-size: 20px;
+        padding: 20px;
+      }
+
+      .mojli {
+        padding: 10px;
+      }
+
+      form {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid #8d6700;
+      }
+
+      button {
+        background-color: rgb(90, 90, 90);
+        color: white;
+        padding: 12px 20px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font: bold 20px "Garamond";
+      }
+      button:hover {
+        background-color: rgb(56, 56, 56);
+      }
+      input.form-input {
+        padding: 10px;
+        border: 1px solid #8d6700;
+      }
+      label {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navigation bar-->
+    <div class="naslovnaLinija">
+      Stefan Stojičić
+      <hr />
+    </div>
+
+    <div class="navbar">
+      <ul class="menu">
+        <li class="icon">
+          <a href="#" onClick="dropdownMenu()">&#9776;</a>
+        </li>
+        <div>
+          <li><a href="index.html">Početna </a></li>
+          <li><a href="biografija.html">Biografija</a></li>
+          <li><a href="projekti.html">Projekti</a></li>
+          <li><a href="galerija.html">Galerija</a></li>
+          <li><a class="active" href="kontakt.html">Kontakt</a></li>
+        </div>
+      </ul>
+    </div>
+    <div class="separator">
+      <hr />
+    </div>
+
+    <div class="naslov1 fade-in" style="font-size: 38px; margin-bottom: 5px">
+      Vreme slanja:
+    </div>
+
+    <!--content-->
+    <div class="container-tekst fade-in">
+      <div class="paragraf1" style="color: #5d4501">
+        <div class="container forma">
+          <table>
+            <tr>
+              <td>Ime:</td>
+              <td id="name"></td>
+            </tr>
+            <tr>
+              <td>Prezime:</td>
+              <td id="surname"></td>
+            </tr>
+            <tr>
+              <td>E-mail:</td>
+              <td id="email"></td>
+            </tr>
+            <tr>
+              <td>Vreme slanja:</td>
+              <td id="dateSent"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="container-footer fade-in">
+      <ul>
+        <li class="moj-nav">
+          `
+          <a
+            href="https://www.facebook.com/st3fann"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-facebook-square fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://twitter.com/STEFDZEKSS"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://www.instagram.com/stefdzeks_/?hl=en"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function dropdownMenu() {
+        var x = document.getElementsByClassName("menu").item(0);
+        if (x.className == "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+
+      function readData() {
+        const stringFromLocalStorage = localStorage.getItem("formData");
+
+        if (stringFromLocalStorage === null) {
+          return;
+        }
+
+        const formData = JSON.parse(stringFromLocalStorage);
+
+        document.querySelector("#name").textContent = formData.name;
+        document.querySelector("#surname").textContent = formData.surname;
+        document.querySelector("#email").textContent = formData.email;
+        document.querySelector("#dateSent").textContent = formData.date;
+      }
+
+      readData();
+    </script>
+  </body>
+</html>

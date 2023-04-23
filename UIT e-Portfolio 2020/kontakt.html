@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stefan Stojičić e-Portfolio" />
+    <meta
+      name="keywords"
+      content="eportfolio, e-portfolio, Stefan Stojičić, portfolio Stefan Stojičić"
+    />
+    <meta
+      name="author"
+      content="Stefan Stojičić, stefannrt2819@gs.viser.edu.rs"
+    />
+    <title>e-Portfolio - Kontakt</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link href="css/stil.css" rel="stylesheet" />
+    <style>
+      
+      
+      ul li {
+        color:  #8d6700;
+        list-style-type: none;
+         margin: 0;
+         height: 3em;
+         background-color: #ffffffd7;
+         text-align: center;   
+      }
+      .mojul{
+        font-size: 20px;
+        padding: 20px;
+      }
+    
+      .mojli{
+        padding: 10px;
+        
+      }
+    
+      form{
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid  #8d6700;
+      }
+
+      button {
+       background-color: rgb(90, 90, 90);
+       color: white;
+       padding: 12px 20px;
+       margin-top: 20px;
+       width: 70%;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       font: bold 20px "Garamond";
+}
+     button:hover {
+       background-color: rgb(56, 56, 56);  
+}
+      input.form-input {
+        width: 20vw;
+      padding: 10px;
+      border: 1px solid  #8d6700;
+}
+
+#form {
+  width: 30vw;
+}
+
+@media (max-width: 1000px) {
+  input.form-input {
+      width: 250px;
+  }
+  #form {
+    width: 310px;
+  }
+}
+
+label{
+  font-size: 20px;
+}
+
+.form-label {
+  display: block;
+}
+
+input:invalid {
+  background-color: rgba(255, 0, 0, 0.05);
+}
+        
+    </style>
+  </head>
+  <body>
+        <!--navigation bar-->
+        <div class="naslovnaLinija">
+          Stefan Stojičić
+          <hr />
+        </div>
+
+        <div class="navbar">
+          <ul class="menu">
+            <li class="icon">
+              <a href="#" onClick="dropdownMenu()">&#9776;</a>
+            </li>
+            <div>
+              <li><a href="index.html">Početna </a></li>
+              <li><a href="biografija.html">Biografija</a></li>
+              <li><a href="projekti.html">Projekti</a></li>
+              <li><a href="galerija.html">Galerija</a></li>
+              <li><a class="active" href="kontakt.html">Kontakt</a></li>
+            </div>
+          </ul>
+        </div>
+        <div class="separator">
+          <hr />
+        </div>
+
+          <div class="naslov1 fade-in" style="font-size: 38px; margin-bottom: 5px"> <a style="color:  #8d6700;" href="podaci.html" target="_blank">
+      Kontakt:</a>
+    </div>
+        
+        <!--content-->
+        <div class="container-tekst fade-in">
+
+          <form id="form" name="mojaForma">
+            
+              <ul class="mojul">
+              <li class="mojli">
+              <label class="form-label" for="userName" style="padding: 2px;" > Ime:</label>
+              <input id="name" class="form-input" type="text" name="ime"  required autofocus placeholder="Unesi Ime">
+            
+              </li>
+
+              <li class="mojli">
+              <label class="form-label" for="userSurname" >Prezime:</label>
+              <input id="surname" class="form-input" type="text"  name="prezime"  required  placeholder="Unesi prezime">
+              </li> 
+
+              <li class="mojli">
+              <label class="form-label" for="email">  E-mail: </label>
+              <input id="email" class="form-input" type="email" name="email" required placeholder="example@gmail.com">
+              </li>
+
+              <li class="mojli">
+              <label class="form-label" for="pass1">Lozinka:</label>
+              <input id="password" class="form-input" type="password" name="lozinka1" required placeholder="Unesi lozinku"></label>
+             </li>
+
+              <li class="mojli">   <label class="form-label" for="pass2">Potvrdi lozinku:</label>
+              <input id="passwordConfirmation" class="form-input" type="password" name="lozinka2"  required placeholder="Unesi lozinku"></label>
+              </li>
+        
+              <li class="buttons" class="mojli">
+                 <button type="submit" class="btn" onclick="provera(event)">
+                <span class="top content">Pošalji</span>
+              </li>
+              </ul>
+            
+            </form>
+          </div>
+          
+          
+    
+
+        <!--footer-->
+      <div class="container-footer fade-in">
+      <ul>
+        <li class="moj-nav">
+          `
+          <a
+            href="https://www.facebook.com/st3fann"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-facebook-square fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://twitter.com/STEFDZEKSS"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://www.instagram.com/stefdzeks_/?hl=en"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function dropdownMenu() {
+        var x = document.getElementsByClassName("menu").item(0);
+        if (x.className == "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+
+      function provera(event) {
+        event.preventDefault()
+        
+        const INVALID_FIELD_BORDER = '2px dashed red';
+        const VALID_FIELD_BORDER = '1px solid #8d6700';
+        const arrOfInputs = [];
+        
+        arrOfInputs.push(document.querySelector('#name'));
+        arrOfInputs.push(document.querySelector('#surname'));
+        arrOfInputs.push(document.querySelector('#email'));
+        arrOfInputs.push(document.querySelector('#password'));
+        arrOfInputs.push(document.querySelector('#passwordConfirmation'));
+
+        // Provera svih inputa
+        for (const el of arrOfInputs) {
+          if(!el.checkValidity()) {
+            el.style.border = INVALID_FIELD_BORDER;
+          }else {
+            el.style.border = VALID_FIELD_BORDER;
+          }
+        }
+
+
+        // Provera sifre
+        const passEl = arrOfInputs[3];
+        const passConfirmEl = arrOfInputs[4];
+
+        if(passEl.value !== ''  && passConfirmEl.value !== '') {
+          if(passEl.value !== passConfirmEl.value) {
+            passEl.style.border = INVALID_FIELD_BORDER;
+            passConfirmEl.style.border = INVALID_FIELD_BORDER;
+          }else {
+            passEl.style.border = VALID_FIELD_BORDER;
+            passConfirmEl.style.border = VALID_FIELD_BORDER;
+          }
+        }
+
+        for (const el of arrOfInputs) {
+          if(el.style.border === INVALID_FIELD_BORDER) {
+            return;
+          }
+        }
+        
+        const formData = {
+          name: arrOfInputs[0].value,
+          surname: arrOfInputs[1].value,
+          email: arrOfInputs[2].value,
+          date: new Date().toString().substring(0, 21)
+        };
+
+        localStorage.setItem('formData', JSON.stringify(formData));
+        alert("Uspesno sacuvano!");
+      }
+    </script>
+  </body>
+</html>

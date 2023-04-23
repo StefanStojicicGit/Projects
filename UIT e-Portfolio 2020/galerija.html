@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stefan Stojičić e-Portfolio" />
+    <meta
+      name="keywords"
+      content="eportfolio, e-portfolio, Stefan Stojičić, portfolio Stefan Stojičić"
+    />
+    <meta
+      name="author"
+      content="Stefan Stojičić, stefannrt2819@gs.viser.edu.rs"
+    />
+    <title>e-Portfolio - Galerija</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link href="css/stil.css" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* kontejner carousela */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        margin-top: 30px;
+        border: 5px solid #8d6700;
+      }
+
+      /* sakrivene slike */
+      .mySlides {
+        display: none;
+      }
+
+      /* dumgici: next i previous */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Pozicija desne strelice */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* Crna pozadina na dodir dugmeta */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* tacke */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      /* promena boje tacaka */
+      .aactive,
+      .dot:hover {
+        background-color: #717171;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--navigation bar-->
+    <div class="naslovnaLinija">
+      Stefan Stojičić
+      <hr />
+    </div>
+
+    <div class="navbar">
+      <ul class="menu">
+        <li class="icon">
+          <a href="#" onClick="dropdownMenu()">&#9776;</a>
+        </li>
+        <div>
+          <li><a href="index.html">Početna </a></li>
+          <li><a href="biografija.html">Biografija</a></li>
+          <li><a href="projekti.html">Projekti</a></li>
+          <li><a class="active" href="galerija.html">Galerija</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </div>
+      </ul>
+    </div>
+    <div class="separator">
+      <hr />
+      <!-- content -->
+      <!-- karousel container  -->
+      <div class="naslov1 fade-in" style="margin: 0; margin-top: 20px">
+        Galerija:
+      </div>
+      <div class="naslov fade-in" style="margin-top: 25px" s>
+        Prezentacija nekih slika sa sajta:
+      </div>
+      <div class="slideshow-container fade-in">
+        <!-- Slike -->
+        <div class="mySlides fade">
+          <img src="img/vdsajt1.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/vdsajt2.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/vdsajt3.png " style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/gimpprojekat.png" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/uitprojekat.png" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="img/inkscapeprojekat.png" style="width: 100%" />
+        </div>
+
+        <!-- dugmici: next i previous -->
+        <a class="prev fade-in" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next fade-in" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- tacke -->
+      <div class="fade-in" style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+
+    <!--footer-->
+    <div class="container-footer fade-in">
+      <ul>
+        <li class="moj-nav">
+          `
+          <a
+            href="https://www.facebook.com/st3fann"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-facebook-square fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://twitter.com/STEFDZEKSS"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://www.instagram.com/stefdzeks_/?hl=en"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- responzivan navbar script -->
+    <script>
+      function dropdownMenu() {
+        var x = document.getElementsByClassName("menu").item(0);
+        if (x.className == "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+
+      //karousel script
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // kontrola next, previous
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // kontrola slike
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" aactive", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " aactive";
+      }
+    </script>
+  </body>
+</html>

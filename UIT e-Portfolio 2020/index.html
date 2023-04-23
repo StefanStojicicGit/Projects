@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stefan Stojičić e-Portfolio" />
+    <meta
+      name="keywords"
+      content="eportfolio, e-portfolio, Stefan Stojičić, portfolio Stefan Stojičić"
+    />
+    <meta
+      name="author"
+      content="Stefan Stojičić, stefannrt2819@gs.viser.edu.rs"
+    />
+    <title>e-Portfolio - Početna</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link href="css/stil.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--navigation bar-->
+    <div class="naslovnaLinija">
+      Stefan Stojičić
+      <hr />
+    </div>
+
+    <div class="navbar">
+      <ul class="menu">
+        <li class="icon">
+          <a href="#" onClick="dropdownMenu()">&#9776;</a>
+        </li>
+        <div>
+          <li><a class="active" href="index.html">Početna </a></li>
+          <li><a href="biografija.html">Biografija</a></li>
+          <li><a href="projekti.html">Projekti</a></li>
+          <li><a href="galerija.html">Galerija</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </div>
+      </ul>
+    </div>
+
+    <div class="separator">
+      <hr />
+    </div>
+
+    <!--content-->
+    <div class="naslov1 fade-in" style="font-size: 38px; margin-bottom: 5px">
+      Dobrodošli u moj e-Portfolio
+    </div>
+    <div class="container-slika">
+      <div class="slika fade-in">
+        <img src="img/portret.jpg" />
+      </div>
+    </div>
+
+    <div class="container-tekst fade-in">
+      <div class="paragraf1">
+        Zovem se <b>Stefan Stojičić</b> , student sam druge godine
+        <u>Visoke škole elektrotehnike i računarstva</u> u Beogradu, smer
+        <u>Nove računarske tehnologije</u>, indeks: <b>NRT-28/19</b>. Osnovnu
+        školu <u>"Branislav Nušić"</u>, Smederevo i srednju školu
+        <u>"Tehnička škola Smederevo"</u> završio sam <b>odličnim uspehom.</b>
+        Ukoliko želite da saznate nešto više o meni, kliknite na neku od
+        preostalih kartica koje se nalaze na vrhu stranice!
+      </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="container-footer fade-in">
+      <ul>
+        <li class="moj-nav">
+          `
+          <a
+            href="https://www.facebook.com/st3fann"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-facebook-square fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://twitter.com/STEFDZEKSS"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-twitter fa-2x"></i
+          ></a>
+        </li>
+        <li class="moj-nav">
+          <a
+            href="https://www.instagram.com/stefdzeks_/?hl=en"
+            style="color: grey"
+            target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function dropdownMenu() {
+        var x = document.getElementsByClassName("menu").item(0);
+        if (x.className == "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      }
+    </script>
+  </body>
+</html>
